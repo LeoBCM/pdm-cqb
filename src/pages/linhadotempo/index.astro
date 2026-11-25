@@ -1,6 +1,13 @@
 ---
 import Linha from '../../layouts/Linha.astro'
 import TextDivider from '../../components/TextDivider.astro'
+import { Image } from 'astro:assets'
+import JBS from '../../assets/joaobrasilsilvado.png'
+import QNZ from '../../assets/escolaquinze.png'
+import Luiz from '../../assets/luizxivvacina.png'
+import Bica from '../../assets/fazendadabica.jpg'
+import Dec987 from '../../assets/decreto987.png'
+import Dec1004 from '../../assets/decreto1004.png'
 ---
 <style>
   ul {
@@ -10,6 +17,9 @@ import TextDivider from '../../components/TextDivider.astro'
   .date {
     margin-left: 4%;
     list-style-type: disc;
+  }
+  .date li {
+    font-size: 16pt
   }
   li {
     margin-right: 20%;
@@ -21,6 +31,18 @@ import TextDivider from '../../components/TextDivider.astro'
   }
   html.dark li a:link, html.dark li a:visited {
       color: #ffd8e6;
+  }
+  figure {
+    margin-left: auto;
+    width: 50%;
+  }
+  figcaption {
+    font-size: 10pt;
+    text-align: center;
+    margin-left: auto;
+  }
+  .img {
+    display: flex;
   }
 </style>
 <title>Linha do Tempo | Portal Digital da Memória do Campus Quintino Bocaiúva</title>
@@ -189,7 +211,7 @@ import TextDivider from '../../components/TextDivider.astro'
       Ementa: "Regula a organisação das associações que se fundarem para fins religiosos, Moraes, scientificos, artísticos, políticos ou de simples recreio, nos termos do art. 72, § 3º, da Constituição."
     </li>
     <li>
-      João Brasil Silvado organiza a Escola Quinze em São Cristóvão com base nesta lei.
+      <div class="img">João Brasil Silvado organiza a Escola Quinze em São Cristóvão com base nesta lei.<figure><Image src={JBS} alt="Retrato de João Brasil Silvado." /><figcaption>Fonte: ACERVO INES. Galeria de Diretores - João Brasil Silvado. [S. l.], [20--?]. 1 fotografia. Disponível em: https://br.pinterest.com/pin/590745676097822677/. Acesso em: 24 nov. 2026.</figcaption></figure></div>
     </li>
   </ul>
   <div id="1899"><TextDivider>1899</TextDivider></div>
@@ -212,6 +234,12 @@ import TextDivider from '../../components/TextDivider.astro'
     </li>
     <li>
       A partir da lei n. 628, de 28 de outubro de 1899, passou à competência dos chefes de Polícia e delegados auxiliares no Distrito Federal mover ação judicial contra a vadiagem, a mendicância, a capoeiragem, a embriaguez, os jogos de azar, loterias e rifas não autorizadas por lei, que foram práticas incluídas na categoria contravenção conforme definido pelo Código Penal de 1890. Mantinham ainda o controle de todas as etapas do julgamento, excetuando a sentença final que era prerrogativa do Poder Judiciário (Vianna, 1999, p. 45).
+    </li>
+  </ul>
+  <ul class="date"><li>15 de Novembro</li></ul>
+  <ul>
+    <li>
+      <div class="img">Criação da Escola Quinze de Novembro pelo Chefe de Polícia do Distrito Federal, João Brasil Silvado, no Bairro Imperial de São Christóvão, Rio de Janeiro.<figure><Image src={QNZ} alt="Imagem da Escola Quinze de Novembro em 1905." /><figcaption>Fonte: Pessôa, Paula. Guia da Cidade do Rio de Janeiro, 1905, p.125.</figcaption></figure></div>
     </li>
   </ul>
   <ul class="date"><li>3 de Dezembro</li></ul>
@@ -281,7 +309,7 @@ import TextDivider from '../../components/TextDivider.astro'
       <a target="_blank" href="https://fiocruz.br/noticia/2022/06/cinco-dias-de-furia-revolta-da-vacina-envolveu-muito-mais-do-que-insatisfacao-com">Revolta da Vacina</a>
     </li>
     <li>
-      "Cinco dias de fúria: Revolta da Vacina envolveu muito mais do que insatisfação com a vacinação."
+      <div class="img">Cinco dias de fúria: Revolta da Vacina envolveu muito mais do que insatisfação com a vacinação."<figure><Image src={Luiz} alt="Cartum tópico sobre Luiz XIV e as vacinas." /><figcaption>Autor: Calixto Cordeiro. Fonte: O Malho, 1904.</figcaption></figure></div>
     </li>
     <li>
       "Luiz XIV da seringação"
@@ -294,7 +322,13 @@ import TextDivider from '../../components/TextDivider.astro'
   <ul class="date"><li>22 de Maio</li></ul>
   <ul>
     <li>
-      <a target="_blank" href="https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=332798&id=1532604531628&pagfis=2697">Aquisição da Fazenda da Bica pelo Governo da União.</a>
+      <div class="img">
+        <a target="_blank" href="https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=332798&id=1532604531628&pagfis=2697">Aquisição da Fazenda da Bica pelo Governo da União.</a>
+        <figure>
+          <Image src={Bica} alt="Recorte da Revista da Semana de 10 de Junho de 1906 mostrando a Fazenda da Bica." />
+          <figcaption>Fonte: Revista da Semana, 10/06/1906, p.3554 N.317</figcaption>
+        </figure>
+      </div>
     </li>
     <li>
       "Na Fazenda da Bica, por occasião da nova installação da Escola Correccional Quinze de Novembro, em 22 de maio último".
@@ -311,7 +345,12 @@ import TextDivider from '../../components/TextDivider.astro'
   <ul class="date"><li>11 de Setembro</li></ul>
   <ul>
     <li>
-      <a target="_blank" href="#">Decreto Estadual Nº987, de 11 de setembro de 1906</a>
+      <div class="img">
+        Decreto Estadual Nº987, de 11 de setembro de 1906
+        <figure>
+          <Image src={Dec987} alt="Imagem do Decreto n. 987 de 11 de setembro de 1906." />
+        </figure>
+      </div>
     </li>
     <li>
       Ementa: "Cria quatro escolas profissionaes."
@@ -323,7 +362,12 @@ import TextDivider from '../../components/TextDivider.astro'
   <ul class="date"><li>11 de Dezembro</li></ul>
   <ul>
     <li>
-      <a target="_blank" href="#">Decreto Estadual Nº1.004, de 11 de dezembro de 1906</a>
+      <div>
+        Decreto Estadual Nº1.004, de 11 de dezembro de 1906
+        <figure>
+          <Image src={Dec1004} alt="Imagem do Decreto n. 1.004 de 11 de setembro de 1906." />
+        </figure>
+      </div>
     </li>
     <li>
       Ementa: "Expede regulamento para as Escolas profissionaes."
@@ -750,4 +794,114 @@ import TextDivider from '../../components/TextDivider.astro'
       Ementa: "Lei orgânica do ensino industrial."
     </li>
   </ul>
+  <div id="1943"><TextDivider>1943</TextDivider></div>
+  <ul class="date"><li>1° de Maio</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-5452-1-maio-1943-415500-publicacaooriginal-1-pe.html">DECRETO-LEI Nº 5.452, DE 1º DE MAIO DE 1943</a>
+    </li>
+    <li>
+      Ementa: "Aprova a Consolidação das Leis do Trabalho."
+    </li>
+  </ul>
+  <div id="1944"><TextDivider>1944</TextDivider></div>
+  <ul class="date"><li>11 de Setembro</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/decret/1940-1949/decreto-16575-11-setembro-1944-327309-publicacaooriginal-1-pe.html">Decreto nº 16.575, de 11 de Setembro de 1944</a>
+    </li>
+    <li>
+      Ementa: "Aprova o Regimento do Serviço de Assistência a Menores do Ministério da Justiça e Negócios Interiores."
+    </li>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-6865-11-setembro-1944-386457-publicacaooriginal-1-pe.html">DECRETO-LEI Nº 6.865, DE 11 DE SETEMBRO DE 1944</a>
+    </li>
+    <li>
+      Ementa: "Redefine a competência do Serviço de Assistência a Menores, cria e transforma funções gratificadas e dá outras providências."
+    </li>
+    <li>
+      O SAM passa a atuar em todo o território nacional.
+    </li>
+  </ul>
+  <div id="1946"><TextDivider>1946</TextDivider></div>
+  <ul class="date"><li>10 de Janeiro</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/1937-1946/del8621.htm">DECRETO-LEI No 8.621, DE 10 DE JANEIRO DE 1946</a>
+    </li>
+    <li>
+      Ementa: "Dispõe sôbre a criação do Serviço Nacional de Aprendizagem Comercial e dá outras providências."
+    </li>
+  </ul>
+  <div id="1951"><TextDivider>1951</TextDivider></div>
+  <ul class="date"><li>15 de Janeiro</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1310-15-janeiro-1951-361842-publicacaooriginal-1-pl.html">LEI Nº 1.310, DE 15 DE JANEIRO DE 1951</a>
+    </li>
+    <li>
+      Ementa: "Cria o Conselho Nacional de Pesquisas e dá outras providências."
+    </li>
+    <li>
+      Inicialmente, com o nome de Conselho Nacional de Pesquisas, seu objetivo era "promover e estimular o desenvolvimento da investigação científica e tecnológica em qualquer domínio do conhecimento".
+    </li>
+  </ul>
+  <ul class="date"><li>11 de Julho</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/decret/1950-1959/decreto-29741-11-julho-1951-336144-publicacaooriginal-1-pe.html">DECRETO Nº 29.741, DE 11 DE JULHO DE 1951</a>
+    </li>
+    <li>
+      Institui uma Comissão para promover a Campanha Nacional de Aperfeiçoamento de pessoal de nível superior.
+    </li>
+    <li>
+      A CAPES nasceu de uma campanha nacional feita em 1951 que tinha como meta o aperfeiçoamento do pessoal de nível superior. A missão seria executada por uma Comissão, instituída pelo Decreto 29.741/51, de 11/07/1951, composta por representantes de diferentes órgãos do governo e entidades privadas. Seu presidente foi o então ministro da Educação e Saúde, Ernesto Simões Filho, acompanhado por seu secretário-geral, o professor Anísio Spínola Teixeira.
+    </li>
+  </ul>
+  <ul class="date"><li>6 de Agosto</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/decret/1950-1959/decreto-29857-6-agosto-1951-337586-publicacaooriginal-1-pe.html">DECRETO Nº 29.857, DE 6 DE AGOSTO DE 1951</a>
+    </li>
+    <li>
+      Ementa: "Modifica os arts. 2º, 13 e 15 do Regimento do Serviço de Assistência a Menores do Ministério da Justiça e Negócios Interiores, aprovado pelo Decreto nº 16.575, de 11 de setembro de 1944."
+    </li>
+  </ul>
+  <div id="1953"><TextDivider>1953</TextDivider></div>
+  <ul class="date"><li>25 de Julho</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1920-25-julho-1953-367058-normaatualizada-pl.pdf">LEI Nº 1.920, DE 25 DE JULHO DE 1953</a>
+    </li>
+    <li>
+      Ementa: "Cria o Ministério da Saúde e dá outras providências."
+    </li>
+    <li>
+      Art. 2º O Ministério da Educação e Saúde passa a denominar-se "Ministério da Educação e Cultura".
+    </li>
+  </ul>
+  <div id="1956"><TextDivider>1956</TextDivider></div>
+  <ul class="date"><li>20 de Novembro</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/decret/1950-1959/decreto-40385-20-novembro-1956-331327-publicacaooriginal-1-pe.html">DECRETO Nº 40.385, DE 20 DE NOVEMBRO DE 1956</a>
+    </li>
+    <li>
+      Ementa: "Modifica os artigos 2º e 3º, 13 e 15 do Regimento do Serviço de Assistência a Menores do Magistério da Justiça e Negócios Interiores, aprovado pelo Decreto n° 16.575, de 11 de setembro de 1944 e alterado pelo de n° 29.857, de 6 de agosto de 1951."
+    </li>
+    <li>
+      Alterou diversos artigos do Regimento do Serviço de Assistência a Menores (S.A.M.) e reafirmou o papel de instituições como o Instituto Profissional Quinze de Novembro (I.P.Q.N.)
+    </li>
+  </ul>
+  <div id="1957"><TextDivider>1957</TextDivider></div>
+  <ul class="date"><li>26 de Outubro</li></ul>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www2.camara.leg.br/legin/fed/decret/1950-1959/decreto-42510-26-outubro-1957-381472-publicacaooriginal-1-pe.html">Decreto nº 42.510, de 26 de Outubro de 1957</a>
+    </li>
+    <li>
+      Ementa: "Aprova o Regimento do Serviço de Assistência a Menores."
+    </li>
+  </ul>
+  <div id="1961"><TextDivider>1961</TextDivider></div>
 </Linha>
