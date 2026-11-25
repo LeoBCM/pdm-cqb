@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+html {
+  background-color: #fdf8ff;
+  color: #1c1b20;
+  font-family: Alef;
+  font-size: 14pt;
+  transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+html.dark {
+  background-color: #141318;
+  color: #e6e1e9;
+}
+
+h1 {
+  font-family: Bowlby One;
+  font-size: 28pt;
+  color: #3c103c;
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+html.dark h1 {
+  color: #ffd8e6;
+}
+
+h2 {
+  margin-left: 2%;
+  font-weight: bolder;
+  font-size: 20pt;
+  text-align: left;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 4%;
+}
+
+li {
+  margin-top: 0.4%
+}

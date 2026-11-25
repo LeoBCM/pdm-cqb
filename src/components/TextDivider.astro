@@ -1,0 +1,26 @@
+<style>
+  div {
+    align-items: left;
+    display: flex;
+  }
+  div:before, div:after {
+    flex: 1;
+    content: '';
+    background-color: #3c103c;
+    margin-top: 5.5%;
+    margin-bottom: 4%;
+  }
+  div:before {
+    flex: 0.1;
+  }
+  h1 {
+    padding-left: 0.8%;
+    padding-right: 1%;
+  }
+  html.dark div:before, html.dark div:after {
+    background-color: #5c305c;
+  }
+</style>
+<div>
+  <h1><slot /></h1>
+</div>
