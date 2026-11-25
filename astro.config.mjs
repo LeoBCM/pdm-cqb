@@ -5,10 +5,13 @@ import svelte from '@astrojs/svelte';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pdm-cqb.coelhomachado.com.br',
   integrations: [svelte()],
+
   fonts: [{
     provider: fontProviders.fontsource(),
     name: "Bowlby One",
@@ -22,5 +25,7 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  adapter: cloudflare()
 });
