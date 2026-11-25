@@ -1,12 +1,24 @@
 ---
 import Header from '../components/Header.astro';
-import '../styles/global.css'
-const pageTitle = "Portal Digital da Memória do Campus Quintino Bocaiúva"
+import '../styles/global.css';
+import { Font } from "astro:assets";
+const pageTitle = "Portal Digital da Memória do Campus Quintino Bocaiúva";
 ---
 <html>
   <head>
-    <meta charset="utf-8">
+    <Font cssVariable="--bowlby" />
+    <Font cssVariable="--alef" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
   </head>
+  <style is:global>
+    html {
+      font-family: var(--alef);
+    }
+    h1 {
+      font-family: var(--bowlby);
+    }
+  </style>
   <body>
     <Header />
     <slot />

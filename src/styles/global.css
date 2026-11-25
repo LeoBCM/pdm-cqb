@@ -3,7 +3,6 @@
 html {
   background-color: #fdf8ff;
   color: #1c1b20;
-  font-family: Alef;
   font-size: 14pt;
   transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -14,7 +13,6 @@ html.dark {
 }
 
 h1 {
-  font-family: Bowlby One;
   font-size: 28pt;
   color: #3c103c;
   text-align: center;
