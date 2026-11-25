@@ -7,8 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://LeoBCM.github.io'
-  base: '/pdm-cqb'
+  site: 'https://pdm-cqb.coelhomachado.com.br'
   integrations: [svelte()],
 
   vite: {
